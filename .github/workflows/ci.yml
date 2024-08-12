@@ -32,3 +32,7 @@ jobs :
           name: myapp-jar
           path: target/*.jar
 
+      - name: Run Tests
+        if: contains(github.event.head.commit.message,'test commit')
+        run: mvn test
+
