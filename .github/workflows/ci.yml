@@ -24,3 +24,11 @@ jobs :
         run: mvn clean install
       - name: Test
         run: mvn test
+
+      - name: Upload jar to Github
+        if: ${{success()}}
+        uses: actions/upload-artifact@v3
+        with:
+          name: myapp-jar
+          path: target/*.jar
+
