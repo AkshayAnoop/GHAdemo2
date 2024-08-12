@@ -31,12 +31,12 @@ jobs :
           echo "JOB ID = ${{github.job}}"
           echo "Run ID = ${{github.run_id}}"
           echo "user = ${{github.actor}}"
-        
+
       - name: Run Tests
         run: mvn test
 
       - name: Upload jar to Github
-        if: contains(github.actor,'raviteja')
+        if: contains(github.actor,'AkshayAnoop')
         uses: actions/upload-artifact@v3
         with:
           name: myapp-jar
