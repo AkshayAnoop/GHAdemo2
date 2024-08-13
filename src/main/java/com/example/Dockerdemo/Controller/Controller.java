@@ -12,9 +12,9 @@ public class Controller {
     public String login() {
         return ("login successful");
     }
-    @GetMapping("/api/data2")
-    public List<String> getUsers(){
-        return List.of("1", "2", "3");
+    @GetMapping("/registeration")
+    public String register(){
+        return ("register success");
     }
 }
 
